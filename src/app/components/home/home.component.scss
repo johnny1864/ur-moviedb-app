@@ -1,0 +1,13 @@
+.movie-card {
+  width: 200px;
+  overflow: hidden;
+  transition: all 400ms ease;
+  justify-content: space-between;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  mat-card-title {
+    height: 2.2rem;
+  }
+}

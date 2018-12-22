@@ -9,3 +9,9 @@
 .hide {
   display: none;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
