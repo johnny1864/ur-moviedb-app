@@ -13,6 +13,7 @@ import { RoutingModule } from "./routing.module";
 import { LandingComponent } from "./components/landing/landing.component";
 
 import { MovieService } from "./services/movie.service";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MovieService } from "./services/movie.service";
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

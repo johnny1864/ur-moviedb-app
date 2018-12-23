@@ -16,7 +16,7 @@ export class LoggedinGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    let token = localStorage.getItem("token");
+    let token = sessionStorage.getItem("token");
 
     if (token) {
       return true;
