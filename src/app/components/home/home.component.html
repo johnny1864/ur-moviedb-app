@@ -1,7 +1,7 @@
 <div class="container">
   <h2>{{ pageTitle }}</h2>
-  <div *ngIf="movies" class="grid">
-    <mat-card *ngFor="let movie of movies" class="movie-card">
+  <div *ngIf="(movies$ | async) as movies" class="grid">
+    <mat-card *ngFor="let movie of movies['results']" class="movie-card">
       <mat-card-header>
         <mat-card-title class="center">
           <a routerLink="home">{{ movie.title }}</a>

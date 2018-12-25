@@ -13,7 +13,6 @@ export class LandingComponent implements OnInit {
 
   continueAsGuest() {
     sessionStorage.setItem("token", "guest");
-    console.log("cag clicked");
     this.router.navigate(["home"]);
   }
 }

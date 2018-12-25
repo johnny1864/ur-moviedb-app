@@ -4,22 +4,24 @@
     grid-gap: 2em 1em;
     justify-items: center;
   }
-
   .movie-card {
     min-width: 200px;
     overflow: hidden;
-    transition: all 400ms ease;
+
+    mat-card-title {
+      overflow: hidden;
+      min-height: 2rem;
+      height: auto;
+    }
 
     img {
       display: block;
       margin: 0 auto;
+      transition: all 400ms ease;
     }
 
-    &:hover {
+    &:hover img {
       transform: scale(1.05);
-    }
-    mat-card-title {
-      height: 2.2rem;
     }
   }
 }

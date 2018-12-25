@@ -7,7 +7,7 @@ import { MovieService } from "src/app/services/movie.service";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  movies: any;
+  movies$: any;
   pageTitle: String = "Home";
   constructor(private _moiveService: MovieService) {}
 
@@ -16,10 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   nowPlaying() {
-    this._moiveService.nowPlaying.subscribe(results => {
-      this.movies = results["results"];
-      console.log(this.movies);
-    });
+    this.movies$ = this._moiveService.nowPlaying;
     this.pageTitle = "Now Playing";
   }
 }
