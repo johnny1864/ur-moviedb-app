@@ -1,8 +1,9 @@
-<div *ngIf="movies" class="row">
-  <div *ngFor="let movie of movies">
-    <mat-card class="movie-card">
+<div class="container">
+  <h2>{{ pageTitle }}</h2>
+  <div *ngIf="movies" class="grid">
+    <mat-card *ngFor="let movie of movies" class="movie-card">
       <mat-card-header>
-        <mat-card-title>
+        <mat-card-title class="center">
           <a routerLink="home">{{ movie.title }}</a>
         </mat-card-title>
       </mat-card-header>

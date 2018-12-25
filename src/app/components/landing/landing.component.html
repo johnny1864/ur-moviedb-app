@@ -1,7 +1,15 @@
-<div class="container">
-  <div>
-    <a mat-raised-button color="primary" routerLink="../login">Login</a>
-    <a mat-raised-button color="accent" routerLink="../register">Register</a>
+<div class="landing-page">
+  <div class="content">
+    <div>
+      <a class="btn" mat-raised-button color="primary" routerLink="../login"
+        >Login</a
+      >
+      <a class="btn" mat-raised-button color="accent" routerLink="../register"
+        >Register</a
+      >
+    </div>
+    <a class="btn guest-btn" mat-button (click)="continueAsGuest()"
+      >Continue as Guest</a
+    >
   </div>
-  <a mat-button (click)="continueAsGuest()">Continue as Guest</a>
 </div>

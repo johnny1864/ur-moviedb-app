@@ -1,13 +1,25 @@
-.movie-card {
-  width: 200px;
-  overflow: hidden;
-  transition: all 400ms ease;
-  justify-content: space-between;
-
-  &:hover {
-    transform: scale(1.05);
+.container {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em 1em;
+    justify-items: center;
   }
-  mat-card-title {
-    height: 2.2rem;
+
+  .movie-card {
+    min-width: 200px;
+    overflow: hidden;
+    transition: all 400ms ease;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    mat-card-title {
+      height: 2.2rem;
+    }
   }
 }

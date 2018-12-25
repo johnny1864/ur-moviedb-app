@@ -1,0 +1,33 @@
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../../assets/test.jpg);
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+
+  .content {
+    background-color: rgba(0, 102, 144, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+    .btn {
+      font-size: 1em;
+      padding: 0 2em;
+      margin: 1em;
+    }
+
+    .guest-btn {
+      color: blue;
+      text-decoration: underline;
+      font-size: 1.2em;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

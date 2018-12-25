@@ -12,7 +12,7 @@ export class LandingComponent implements OnInit {
   ngOnInit() {}
 
   continueAsGuest() {
-    sessionStorage.setItem("token", "guess");
+    sessionStorage.setItem("token", "guest");
     console.log("cag clicked");
     this.router.navigate(["home"]);
   }

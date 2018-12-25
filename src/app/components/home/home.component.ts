@@ -8,6 +8,7 @@ import { MovieService } from "src/app/services/movie.service";
 })
 export class HomeComponent implements OnInit {
   movies: any;
+  pageTitle: String = "Home";
   constructor(private _moiveService: MovieService) {}
 
   ngOnInit() {
@@ -19,5 +20,6 @@ export class HomeComponent implements OnInit {
       this.movies = results["results"];
       console.log(this.movies);
     });
+    this.pageTitle = "Now Playing";
   }
 }
