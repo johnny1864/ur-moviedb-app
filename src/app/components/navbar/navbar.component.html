@@ -3,7 +3,7 @@
     <span class="logo"><a routerLink="home">UR/MovieDB</a></span>
     <span class="spacer"></span>
     <nav>
-      <input class="hide" type="text" />
+      <input [class.hide]="!loggedin" type="text" />
       <span><a mat-button routerLink="login">Login</a></span>
       <span routerLink="register"><a mat-button>Register</a></span>
     </nav>

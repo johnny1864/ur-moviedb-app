@@ -21,4 +21,12 @@ export class MovieService {
       }&language=en-US&page=1`
     );
   }
+
+  getPopular() {
+    this.movies = this.http.get(
+      `${this.baseURL}movie/popular?api_key=${
+        this.API_key
+      }&language=en-US&page=1`
+    );
+  }
 }

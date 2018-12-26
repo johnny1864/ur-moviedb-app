@@ -12,11 +12,17 @@ export class HomeComponent implements OnInit {
   constructor(private _moiveService: MovieService) {}
 
   ngOnInit() {
-    this.nowPlaying();
+    this.popular();
   }
 
   nowPlaying() {
     this.movies$ = this._moiveService.nowPlaying;
     this.pageTitle = "Now Playing";
+  }
+
+  popular() {
+    this._moiveService.getPopular();
+    this.movies$ = this._moiveService.movies;
+    this.pageTitle = "Popular";
   }
 }
