@@ -14,6 +14,10 @@ import { LandingComponent } from "./components/landing/landing.component";
 
 import { MovieService } from "./services/movie.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
+import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    LandingComponent
+    LandingComponent,
+    AppLayoutComponent,
+    SiteLayoutComponent,
+    SideBarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
