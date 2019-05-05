@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 * {
   box-sizing: border-box;
@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .hide {
@@ -19,24 +20,31 @@ a {
   display: grid;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 .text-center {
   text-align: center;
 }
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  width: 100%;
+}
+
+.page {
+  padding-top: 60px;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
 }

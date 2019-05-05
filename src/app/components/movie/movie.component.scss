@@ -1,0 +1,27 @@
+.movie {
+  margin-top: 2rem;
+  .left {
+    img {
+      width: 100%;
+    }
+  }
+
+  .movie-card {
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+
+  @media screen and (max-width: 568px) {
+    .left {
+      img {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+
+    .movie-card {
+      margin-right: 0;
+    }
+  }
+}

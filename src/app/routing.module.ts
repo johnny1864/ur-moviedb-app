@@ -7,8 +7,21 @@ import { HomeComponent } from './components/home/home.component';
 import { LoggedinGuard } from './services/loggedin.guard';
 import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 const routes: Routes = [
+  // APP-LAYOUT PATHS
+  {
+    path: '',
+    component: AppLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'movie/:id', component: MovieComponent }
+    ],
+    canActivate: [LoggedinGuard]
+  },
+
   // SITE-LAYOUT PATHS
   {
     path: '',
@@ -18,14 +31,6 @@ const routes: Routes = [
       { path: 'landing', component: LandingComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent }
-    ]
-  },
-  // APP-LAYOUT PATHS
-  {
-    path: '',
-    component: AppLayoutComponent,
-    children: [
-      { path: 'home', component: HomeComponent, canActivate: [LoggedinGuard] }
     ]
   },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }

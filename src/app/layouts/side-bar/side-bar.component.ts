@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
+  genres$: any;
 
-  constructor() { }
+  constructor(private _movie: MovieService) {}
 
   ngOnInit() {
+    this.genres();
   }
 
+  genres() {
+    this.genres$ = this._movie.genres;
+  }
 }

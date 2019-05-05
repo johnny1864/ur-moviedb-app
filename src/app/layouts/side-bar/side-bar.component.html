@@ -1,3 +1,10 @@
-<p>
-  side-bar works!
-</p>
+<mat-sidenav-container class="side-bar">
+  <mat-sidenav>Genres</mat-sidenav>
+  <mat-sidenav-content>
+    <ul *ngIf="genres$ | async as genres">
+      <li *ngFor="let genres of genres['genres']">
+        <a routerLink="home">{{ genres['name'] }}</a>
+      </li>
+    </ul>
+  </mat-sidenav-content>
+</mat-sidenav-container>

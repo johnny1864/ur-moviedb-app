@@ -1,0 +1,40 @@
+<div *ngIf="movie$ | async as movie" class="movie">
+  <div class="row">
+    <div class="col-md-4 col-sm-8 left">
+      <img
+        src="http://image.tmdb.org/t/p/w342{{ movie.poster_path }}"
+        alt="{{ movie.title }} poster"
+      />
+    </div>
+    <div class="col-md-8">
+      <h1>{{ movie.title }}</h1>
+      <div class="movie-info">
+        Average Rating: {{ movie.vote_average }} | {{ movie.runtime }} |
+        {{ movie.release_date }}
+      </div>
+
+      <hr />
+      <div class="overview">
+        <h2>Summary</h2>
+        <p>{{ movie.overview }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="relatedMovie$ | async as relatedMovie" class="related-movies">
+    <h3 class="mt-3 mb-3">Related Movies</h3>
+    <div class=" justify-content-between d-flex flex-wrap">
+      <div
+        class="movie-card"
+        *ngFor="let movie of relatedMovie['results'] | slice: 10"
+      >
+        <a (click)="navigateToMovie(movie.id)">
+          <img
+            mat-card-image
+            src="http://image.tmdb.org/t/p/w185{{ movie.poster_path }}"
+            alt="Poster image of {{ movie.title }}"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,16 +1,29 @@
-<div class="container">
-  <h2>{{ pageTitle }}</h2>
-  <div *ngIf="(movies$ | async) as movies" class="grid">
-    <mat-card *ngFor="let movie of movies['results']" class="movie-card">
-      <mat-card-header>
-        <mat-card-title class="center">
-          <a routerLink="home">{{ movie.title }}</a>
-        </mat-card-title>
-      </mat-card-header>
+<ul class="menu">
+  <li (click)="popular()">
+    <button mat-raised-button color="primary">Popular</button>
+  </li>
+  <li (click)="nowPlaying()">
+    <button mat-raised-button color="primary">Now Playing</button>
+  </li>
+  <li (click)="topRated()">
+    <button mat-raised-button color="primary">Top Rated</button>
+  </li>
+  <li (click)="upcoming()">
+    <button mat-raised-button color="primary">Upcoming</button>
+  </li>
+</ul>
+<div *ngIf="movies$ | async as movies" class="row">
+  <div
+    class=" col-md-3"
+    *ngFor="let movie of movies['results']"
+    routerLink="../movie/{{ movie.id }}"
+    data-aos="fade-up"
+  >
+    <div class="movie-card">
       <img
-        src="http://image.tmdb.org/t/p/w185{{ movie.poster_path }}"
+        src="http://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
         alt="Poster image of {{ movie.title }}"
       />
-    </mat-card>
+    </div>
   </div>
 </div>

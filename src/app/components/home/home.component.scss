@@ -1,27 +1,32 @@
-.container {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2em 1em;
-    justify-items: center;
+.menu {
+  display: flex;
+  margin: 2em;
+
+  li {
+    padding: 1em;
+    margin-right: 0.5em;
+    cursor: pointer;
+
+    &:hover h2 {
+      color: blue;
+    }
   }
-  .movie-card {
-    min-width: 200px;
-    overflow: hidden;
 
-    mat-card-title {
-      overflow: hidden;
-      min-height: 2rem;
-      height: auto;
-    }
+  li.active {
+    color: gold;
+  }
+}
+.movie-card {
+  overflow: hidden;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  img {
+    transition: all 400ms ease;
+    width: 100%;
+  }
 
-    img {
-      display: block;
-      margin: 0 auto;
-      transition: all 400ms ease;
-    }
-
-    &:hover img {
-      transform: scale(1.05);
-    }
+  &:hover img {
+    transform: scale(1.1);
   }
 }

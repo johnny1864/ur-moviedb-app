@@ -1,6 +1,6 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row class="container">
-    <span class="logo"><a routerLink="home">UR/MovieDB</a></span>
+    <span class="logo"><a routerLink="['/', 'home']">UR/MovieDB</a></span>
     <span class="spacer"></span>
     <input
       matInput
@@ -10,8 +10,8 @@
       placeholder="Search Title"
     />
     <nav>
-      <span><a mat-button routerLink="login">Login</a></span>
-      <span routerLink="register"><a mat-button>Register</a></span>
+      <span><a mat-button (click)="toLogin()">Login</a></span>
+      <span><a mat-button (click)="toRegister()">Register</a></span>
     </nav>
   </mat-toolbar-row>
 </mat-toolbar>

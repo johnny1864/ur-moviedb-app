@@ -1,15 +1,16 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: "app-navbar",
-  templateUrl: "./navbar.component.html",
-  styleUrls: ["./navbar.component.scss"]
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
   loggedin: boolean = false;
-  movie: string = "";
+  movie: string = '';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.isLoggedin();
@@ -17,8 +18,16 @@ export class NavbarComponent implements OnInit {
 
   // CHECK IF A USER IS LOGGED IN
   isLoggedin() {
-    const token = window.sessionStorage.getItem("token");
+    const token = window.sessionStorage.getItem('token');
 
     this.loggedin = token ? true : false;
+  }
+
+  toLogin() {
+    this.router.navigate(['/', 'login']);
+  }
+
+  toRegister() {
+    this.router.navigate(['/', 'register']);
   }
 }
