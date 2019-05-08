@@ -1,6 +1,7 @@
 <div class="login">
   <div class="left col-md-6"></div>
   <div class="right col-md-6">
+    <h1 class="text-center">Login</h1>
     <form class="login-form form " [formGroup]="formGroup">
       <mat-form-field>
         <input
@@ -12,12 +13,15 @@
       </mat-form-field>
       <mat-form-field>
         <input
-          type="password"
           matInput
-          placeholder="Password"
-          formControlName="password"
+          placeholder="Enter your password"
+          [type]="hide ? 'password' : 'text'"
         />
+        <mat-icon matSuffix (click)="hide = !hide">{{
+          hide ? 'visibility_off' : 'visibility'
+        }}</mat-icon>
       </mat-form-field>
+      <button class="btn-primary btn">Login</button>
     </form>
   </div>
 </div>

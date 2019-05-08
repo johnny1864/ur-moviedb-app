@@ -42,6 +42,15 @@ export class MovieService {
     );
   }
 
+  searchTitle(title: string) {
+    console.log(title);
+    return this.http.get(
+      `${this.baseURL}search/movie?api_key=${
+        this.API_key
+      }&language=en-US&query=${title}&page=1&include_adult=false`
+    );
+  }
+
   get genres() {
     return this.http.get(
       `${this.baseURL}genre/movie/list?api_key=${
@@ -50,13 +59,13 @@ export class MovieService {
     );
   }
 
-  getMovie(id) {
+  getMovie(id: string) {
     return this.http.get(
       `${this.baseURL}movie/${id}?api_key=${this.API_key}&language=en-US&page=1`
     );
   }
 
-  getrelatedMovies(id) {
+  getrelatedMovies(id: string) {
     return this.http.get(
       `${this.baseURL}movie/${id}/similar?api_key=${
         this.API_key

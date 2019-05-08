@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MovieService } from './services/movie.service';
+import { UserService } from './services/user.service';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -19,6 +20,7 @@ import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component
 import { SideBarComponent } from './layouts/side-bar/side-bar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { MovieComponent } from './components/movie/movie.component';
     SiteLayoutComponent,
     SideBarComponent,
     DashboardComponent,
-    MovieComponent
+    MovieComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { MovieComponent } from './components/movie/movie.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [MovieService],
+  providers: [MovieService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

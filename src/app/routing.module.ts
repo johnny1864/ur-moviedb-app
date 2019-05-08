@@ -8,6 +8,7 @@ import { LoggedinGuard } from './services/loggedin.guard';
 import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 const routes: Routes = [
   // APP-LAYOUT PATHS
@@ -17,6 +18,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      { path: 'movies/:query', component: MoviesComponent },
       { path: 'movie/:id', component: MovieComponent }
     ],
     canActivate: [LoggedinGuard]
@@ -32,8 +34,8 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent }
     ]
-  },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  }
+  //{ path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

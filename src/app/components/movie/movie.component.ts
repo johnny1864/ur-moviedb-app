@@ -25,7 +25,9 @@ export class MovieComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.routeURL.params.unsubscribe();
+    // this.routeURL.params.unsubscribe();
+    this.routeURL.unsubscribe();
+    console.log('destroyed');
   }
 
   getMovie() {
@@ -34,11 +36,11 @@ export class MovieComponent implements OnInit, OnDestroy {
     this.getRelatedMovies(id);
   }
 
-  getRelatedMovies(id) {
+  getRelatedMovies(id: string) {
     this.relatedMovie$ = this._movie.getrelatedMovies(id);
   }
 
-  navigateToMovie(id) {
+  navigateToMovie(id: string) {
     this.router.navigate(['/', 'movie', id]);
   }
 }

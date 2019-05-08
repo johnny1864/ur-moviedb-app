@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   loggedin: boolean = false;
-  movie: string = '';
+  query: string = '';
 
   constructor(private router: Router) {}
 
@@ -19,7 +19,6 @@ export class NavbarComponent implements OnInit {
   // CHECK IF A USER IS LOGGED IN
   isLoggedin() {
     const token = window.sessionStorage.getItem('token');
-
     this.loggedin = token ? true : false;
   }
 
@@ -29,5 +28,13 @@ export class NavbarComponent implements OnInit {
 
   toRegister() {
     this.router.navigate(['/', 'register']);
+  }
+
+  toHome() {
+    this.router.navigate(['/', 'home']);
+  }
+
+  search(query) {
+    query != '' ? this.router.navigate(['/movies', query]) : false;
   }
 }

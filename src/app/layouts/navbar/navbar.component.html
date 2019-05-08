@@ -1,15 +1,18 @@
 <mat-toolbar>
   <mat-toolbar-row class="container">
-    <span class="logo"><a routerLink="['/', 'home']">UR/MovieDB</a></span>
+    <span class="logo"><a (click)="toHome()">UR/MovieDB</a></span>
     <span class="spacer"></span>
-    <input
-      matInput
-      [(ngModel)]="movie"
-      [class.hide]="!loggedin"
-      type="text"
-      placeholder="Search Title"
-    />
     <nav>
+      <span>
+        <input
+          matInput
+          [(ngModel)]="query"
+          [class.hide]="!loggedin"
+          type="text"
+          placeholder="Search Title"
+          (keyup.enter)="search(query)"
+        />
+      </span>
       <span><a mat-button (click)="toLogin()">Login</a></span>
       <span><a mat-button (click)="toRegister()">Register</a></span>
     </nav>

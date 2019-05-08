@@ -1,0 +1,21 @@
+.login {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  .left {
+    background: url('../../../assets/cut.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  mat-icon {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .left {
+      display: none;
+    }
+  }
+}
