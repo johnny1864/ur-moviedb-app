@@ -2,8 +2,8 @@
   <mat-sidenav>Genres</mat-sidenav>
   <mat-sidenav-content>
     <ul *ngIf="genres$ | async as genres">
-      <li *ngFor="let genres of genres['genres']">
-        <a routerLink="home">{{ genres['name'] }}</a>
+      <li *ngFor="let genre of genres['genres']">
+        <a (click)="toGenre(genre)">{{ genre['name'] }}</a>
       </li>
     </ul>
   </mat-sidenav-content>

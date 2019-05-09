@@ -9,6 +9,7 @@ import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { GenresComponent } from './components/genres/genres.component';
 
 const routes: Routes = [
   // APP-LAYOUT PATHS
@@ -19,7 +20,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'movies/:query', component: MoviesComponent },
-      { path: 'movie/:id', component: MovieComponent }
+      { path: 'movie/:id', component: MovieComponent },
+      { path: 'genres', component: GenresComponent }
     ],
     canActivate: [LoggedinGuard]
   },

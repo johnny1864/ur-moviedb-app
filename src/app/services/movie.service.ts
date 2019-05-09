@@ -59,6 +59,14 @@ export class MovieService {
     );
   }
 
+  getGenreMovies(id) {
+    return this.http.get(
+      `${this.baseURL}genre/${id}/movies?api_key=${
+        this.API_key
+      }&language=en-US&page=1`
+    );
+  }
+
   getMovie(id: string) {
     return this.http.get(
       `${this.baseURL}movie/${id}?api_key=${this.API_key}&language=en-US&page=1`

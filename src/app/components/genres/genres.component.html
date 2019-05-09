@@ -1,15 +1,15 @@
 <div class="movies">
-  <h2 class="text-center">Search Results for {{ query }}:</h2>
+  <h2 class="text-center">{{ genre }}:</h2>
   <div *ngIf="movies$ | async as movies" class="row">
     <div
       class=" col-md-3"
       *ngFor="let movie of movies['results']"
-      routerLink="../../movie/{{ movie.id }}"
+      routerLink="../movie/{{ movie.id }}"
       data-aos="fade-up"
     >
       <div class="movie-card">
         <img
-          src="http://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+          src="http://image.tmdb.org/t/p/w342{{ movie.poster_path }}"
           alt="Poster image of {{ movie.title }}"
         />
       </div>

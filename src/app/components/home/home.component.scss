@@ -16,17 +16,3 @@
     color: gold;
   }
 }
-.movie-card {
-  overflow: hidden;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  img {
-    transition: all 400ms ease;
-    width: 100%;
-  }
-
-  &:hover img {
-    transform: scale(1.1);
-  }
-}

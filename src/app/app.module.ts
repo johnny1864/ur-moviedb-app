@@ -21,6 +21,7 @@ import { SideBarComponent } from './layouts/side-bar/side-bar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { GenresComponent } from './components/genres/genres.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MoviesComponent } from './components/movies/movies.component';
     SideBarComponent,
     DashboardComponent,
     MovieComponent,
-    MoviesComponent
+    MoviesComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,

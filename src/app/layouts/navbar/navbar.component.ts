@@ -34,7 +34,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/', 'home']);
   }
 
-  search(query) {
+  search(query: string) {
+    this.query = '';
     query != '' ? this.router.navigate(['/movies', query]) : false;
   }
 }
