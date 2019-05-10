@@ -14,20 +14,11 @@
     align-items: center;
     height: 100vh;
     overflow: hidden;
+  }
 
-    .btn {
-      font-size: 1em;
-      padding: 0 2em;
-      margin: 1em;
-    }
-
-    .guest-btn {
-      color: blue;
-      text-decoration: underline;
-      font-size: 1.2em;
-      &:hover {
-        color: #fff;
-      }
+  .btn {
+    &:hover {
+      background-color: #ecebee;
     }
   }
 }

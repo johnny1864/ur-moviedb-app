@@ -6,17 +6,18 @@
   transition: all 500ms ease-in-out;
 
   ul {
+    background-color: #95878b;
     li {
-      background-color: #ccc;
-      border-top: 1px solid #444;
+      background-color: inherit;
       border-bottom: 1px solid #444;
       padding: 0.5em 1em;
 
       a {
         color: #fff;
         padding: 0 2em;
-        &:hover {
-          color: blue;
+        &:hover,
+        .active {
+          color: #9db9d7;
         }
       }
     }

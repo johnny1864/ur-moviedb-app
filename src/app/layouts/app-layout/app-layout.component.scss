@@ -1,7 +1,14 @@
 .container {
   padding-left: 180px;
+  h2 {
+    padding-left: 0.8em;
+  }
 
   @media screen and (max-width: 768px) {
     padding-left: 0;
+
+    h2 {
+      padding: 0;
+    }
   }
 }

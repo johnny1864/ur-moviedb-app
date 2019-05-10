@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ export class NavbarComponent implements OnInit {
   loggedin: boolean = false;
   query: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private user: UserService) {}
 
   ngOnInit() {
     this.isLoggedin();
@@ -18,7 +19,7 @@ export class NavbarComponent implements OnInit {
 
   // CHECK IF A USER IS LOGGED IN
   isLoggedin() {
-    const token = window.sessionStorage.getItem('token');
+    const token = this.user.isLoggedIn;
     this.loggedin = token ? true : false;
   }
 

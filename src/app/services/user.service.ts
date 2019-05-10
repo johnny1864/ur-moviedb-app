@@ -5,13 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
   loggedIn: boolean;
-  constructor() { }
+  constructor() {}
 
-  get isLoggedIn(){
+  get isLoggedIn() {
     return this.loggedIn;
   }
 
-  login() {
-    
-  }
+  login() {}
 }

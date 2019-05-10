@@ -1,8 +1,8 @@
 <div class="movies">
-  <h2 class="text-center">Search Results for {{ query }}:</h2>
+  <h2>Search Results for {{ query }}:</h2>
   <div *ngIf="movies$ | async as movies" class="row">
     <div
-      class=" col-md-3"
+      class=" col-md-3 col-sm-6"
       *ngFor="let movie of movies['results']"
       routerLink="../../movie/{{ movie.id }}"
       data-aos="fade-up"
