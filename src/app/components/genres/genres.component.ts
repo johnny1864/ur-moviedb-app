@@ -19,8 +19,7 @@ export class GenresComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log();
-    this.routeURL = this.route.params.subscribe(val => {
+    this.routeURL = this.route.queryParamMap.subscribe(val => {
       this.getUrlData();
     });
   }

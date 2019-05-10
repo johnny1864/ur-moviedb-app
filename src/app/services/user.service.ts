@@ -4,6 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-
+  loggedIn: boolean;
   constructor() { }
+
+  get isLoggedIn(){
+    return this.loggedIn;
+  }
+
+  login() {
+    
+  }
 }

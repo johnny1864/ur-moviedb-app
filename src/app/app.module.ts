@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClarityModule } from '@clr/angular';
 
 import { MovieService } from './services/movie.service';
 import { UserService } from './services/user.service';
@@ -46,7 +47,8 @@ import { GenresComponent } from './components/genres/genres.component';
     MaterialModule,
     RoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ClarityModule
   ],
   providers: [MovieService, UserService],
   bootstrap: [AppComponent]

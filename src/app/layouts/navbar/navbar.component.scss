@@ -9,5 +9,11 @@ mat-toolbar {
   input {
     border-radius: 10px;
     outline: none;
+    max-width: 300px;
+    margin-left: auto;
+  }
+
+  .mat-input-element {
+    background: #fff;
   }
 }
